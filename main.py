@@ -9,7 +9,7 @@ def login(x):
     reader = csv.reader(file)
     for line in reader:
         cc.append(line)
-    id=input("\nEnter your Acc number : \n").strip()
+    id=input("\n\nEnter your Acc number : \n").strip()
     password=stdiomask.getpass()
     if list([id,password]) in cc:
         return True
@@ -29,15 +29,15 @@ def new(x):
     
     cred=open(x,mode='a',newline='')
     writer=csv.writer(cred)
-    id=input("Enter your Roll num : ").strip()
+    id=input(   "Enter your Roll num : ").strip()
     s=1
     for i in cc:
         if id in i:
             s=0
             break
     if s==1:
-        password=input("Enter your password : ")
-        password2=input("Enter your password again : ")
+        password=input(   "Enter your password : ")
+        password2=input(   "Enter your password again : ")
         if password==password2:
             writer.writerow([id,password])
             print("!!! Account created successfully !!!") 
@@ -48,7 +48,8 @@ def new(x):
         print("Account already exists !!!")
         new(x)
 def screen2(x):
-    c=int(input("1. LogIn\n2. New User\n"))
+    c=int(input("\n   1. LogIn\n   2. New User\n\n   Enter your choice"))
+    os.system('cls')
     if c==1:
         return login(x)
     elif c==2:
