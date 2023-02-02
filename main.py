@@ -1,6 +1,7 @@
 import csv
 import stdiomask
 import os
+import student
 
 
 def login(x):
@@ -12,7 +13,7 @@ def login(x):
     id=input("\n\nEnter your Acc number : \n").strip()
     password=stdiomask.getpass()
     if list([id,password]) in cc:
-        return True
+        return id
         #edit
     else:
         os.system('cls')
@@ -73,10 +74,11 @@ def mainscreen():
         c=int(input("what is your choice : "))
         os.system('cls')
         if c==1:
-            stat=screen2('studcred.csv')
+            id=screen2('studcred.csv')
+            student.stud(id)
         elif c==2:
-            stat=screen2('mancred.csv')
-        
+            id=screen2('mancred.csv')
+                #complaint func
         a=input('''\n\nDo you want to return back to home page ? (y/n)''').strip()
 
 mainscreen()
