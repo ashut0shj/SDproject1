@@ -1,5 +1,6 @@
 import csv
 import os 
+from prettytable import PrettyTable
 
 x='complaints.csv'
 def complaintreg():
@@ -16,22 +17,22 @@ def complaintreg():
     return c
 def printer(i):
     print('lllll')
+    t=['','Mess','Hostel',"Library",'Academic','Ragging']
+    print(t[int(i[1])],'  :  ',i[2])
     
 
 def display(id):
     cc=[]
+    t=['','Mess','Hostel',"Library",'Academic','Ragging']
+    table=PrettyTable(['Category','Complaint'])
     file = open('complaints.csv')
     reader = csv.reader(file)
     for line in reader:
         cc.append(line)
-        print(line)
     for i in cc:
-        try:
-            if id==int(i[0]):
-                t=['','Mess','Hostel',"Library",'Academic','Ragging']
-                print(t[int(i[1])],'  :  ',i[2])
-        except:
-            ppppp=00000
+        table.add_row([t[(int(i[1]))],i[2]])
+    print(table)
+
 def stud(id):
     cond='y'
     while(cond=='y'):
