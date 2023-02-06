@@ -15,25 +15,27 @@ def complaintreg():
     os.system('cls')
     return c
 def printer(i):
-    t=['','Mess','Hostel',"Library",'Academic','Ragging']
-    print(t[int(i[1])],'  :  ',i[2])
+    print('lllll')
+    
 
 def display(id):
     cc=[]
-    file = open(x)
+    file = open('complaints.csv')
     reader = csv.reader(file)
     for line in reader:
         cc.append(line)
+        print(line)
     for i in cc:
         try:
             if id==int(i[0]):
-                printer(i)
+                t=['','Mess','Hostel',"Library",'Academic','Ragging']
+                print(t[int(i[1])],'  :  ',i[2])
         except:
             ppppp=00000
 def stud(id):
     cond='y'
     while(cond=='y'):
-        os.system('sys')
+        os.system('cls')
         cc=[]
         file = open(x)
         reader = csv.reader(file)
@@ -52,12 +54,12 @@ def stud(id):
         os.system('cls')
         if c==1:
             s=complaintreg()
-            os.system('cls')
             comp=input('\n\n   Enter your complaint : \n\n   ')
             writer.writerow([id,s,comp])
             print('\n\nComplaint registered !!!')
         elif c==2:
             display(id)
+            cond=input('''\n\nDo you want to return back to home page ? dis (y/n)''').strip()
 
 
 

@@ -49,7 +49,7 @@ def new(x):
         print("Account already exists !!!")
         new(x)
 def screen2(x):
-    c=int(input("\n   1. LogIn\n   2. New User\n\n   Enter your choice"))
+    c=int(input("\n   1. LogIn\n   2. New User\n\n   Enter your choice  :  "))
     os.system('cls')
     if c==1:
         return login(x)
