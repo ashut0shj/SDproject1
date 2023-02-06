@@ -15,11 +15,6 @@ def complaintreg():
     c=int(input("\n\n  Enter your choice : "))
     os.system('cls')
     return c
-def printer(i):
-    print('lllll')
-    t=['','Mess','Hostel',"Library",'Academic','Ragging']
-    print(t[int(i[1])],'  :  ',i[2])
-    
 
 def display(id):
     cc=[]
