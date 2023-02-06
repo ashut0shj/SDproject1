@@ -2,6 +2,7 @@ import csv
 import stdiomask
 import os
 import student
+import management
 
 
 def login(x):
@@ -78,7 +79,7 @@ def mainscreen():
             student.stud(id)
         elif c==2:
             id=screen2('mancred.csv')
-                #complaint func
+            management.display(id)   #complaint func
         a=input('''\n\nDo you want to return back to home page ? (y/n)''').strip()
 
 mainscreen()
