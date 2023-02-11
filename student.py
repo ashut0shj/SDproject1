@@ -25,7 +25,11 @@ def display(id):
     for line in reader:
         cc.append(line)
     for i in cc:
-        table.add_row([t[(int(i[1]))],i[2]])
+        try:
+            if int(id)==int(i[0]):
+                table.add_row([t[(int(i[1]))],i[2]])
+        except:
+            print("fuck")
     print(table)
 
 def stud(id):
@@ -44,7 +48,8 @@ def stud(id):
         a='''          Welcome
 
                 1 : Register new complaint
-                2 : View previous complaints'''
+                2 : View previous complaints
+                3 : Delete a complaint'''
         print(a)
         c=int(input("\n\n Enter your choice : "))
         os.system('cls')
@@ -56,6 +61,9 @@ def stud(id):
         elif c==2:
             display(id)
             cond=input('''\n\nDo you want to return back to home page ? dis (y/n)''').strip()
+        elif c==3:
+            display(id)
+
 
 
 
