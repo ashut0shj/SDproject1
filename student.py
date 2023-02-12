@@ -28,7 +28,6 @@ def display(id):
         cc.append(line)
     cc.pop(0)
     for i in cc:
-        print(i)
         
         if int(id)==int(float(i[1])):
             table.add_row([i[0],t[(int(i[2]))],i[3],i[4]])
