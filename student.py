@@ -26,12 +26,13 @@ def display(id):
     reader = csv.reader(file)
     for line in reader:
         cc.append(line)
+    cc.pop(0)
     for i in cc:
-        try:
-            if int(id)==int(i[1]):
-                table.add_row([i[0],t[(int(i[2]))],i[3],i[4]])
-        except:
-            print()
+        print(i)
+        
+        if int(id)==int(float(i[1])):
+            table.add_row([i[0],t[(int(i[2]))],i[3],i[4]])
+
     print(table)
 
 def approve(id):
