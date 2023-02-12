@@ -1,9 +1,13 @@
-id,cat,comp
-22102,1,ganda khana hai bhai
-22102,2,parda laga do
-22102,1,khana nahi milta acha
-22102,3,books nahi hai
-22102,1,samosa aur chahiye
-22102,1,chicken nahi kaua hai
-22,2,shor
-22,3,aur shor
+ind,id,cat,comp,status
+0,22102,1,ganda khana hai bhai,
+1,22102,2,parda laga do,+
+2,22102,1,khana nahi milta acha,+
+3,22102,3,books nahi hai,
+4,22102,1,samosa aur chahiye,+
+5,22102,1,chicken nahi kaua hai,
+6,22,2,shor,+
+7,22,3,aur shor,+
+8,22,1,bohot oil daalte hai,+
+9,22,1,admin ko paneer chahiye,+
+10,22,2,jhaadu lagwa do,+
+11,22,1,signal nahi aata,+
