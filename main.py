@@ -38,16 +38,16 @@ def new(x):
             s=0
             break
     if s==1:
-        password=input(   "Enter your password : ")
-        password2=input(   "Enter your password again : ")
+        password=stdiomask.getpass()
+        password2=stdiomask.getpass()
         if password==password2:
             writer.writerow([id,password])
-            print("!!! Account created successfully !!!") 
             os.system('cls')
-            login(x)
+            print("!!! Account created successfully !!!\n\n")
+            screen2(x)
 
     else:
-        print("Account already exists !!!")
+        print("\nAccount already exists !!!\n")
         new(x)
 def screen2(x):
     c=int(input("\n   1. LogIn\n   2. New User\n\n   Enter your choice  :  "))
@@ -56,20 +56,23 @@ def screen2(x):
         return login(x)
     elif c==2:
         new(x)
+    else:
+        print(" error \n\n")
+        screen2(x)
 
 def mainscreen():
     stat=0
     os.system('cls')
 
-    p="""                                                       IIIT Naya Raipur
+    p="""                            IIIT Naya Raipur
 
-                                                            WELCOME"""
+                                        WELCOME\n\n"""
     print(p)
     a="y"
     while a=="y":
         print("""  Enter your choice
-                                        1 : Student
-                                        2 : Management 
+                                    1 : Student
+                                    2 : Management 
                                         
                                                                 """)
         c=int(input("what is your choice : "))

@@ -20,8 +20,7 @@ def display(id):
             2 : Hostel
             3 : Library 
             4 : Academic
-            5 : Ragging 
-            6 : All          '''
+            5 : Ragging        '''
         print(a)
         c=int(input("\n\n  Enter your choice : "))
         table=PrettyTable(['Uid','Acc no.','Complaints','Status'])

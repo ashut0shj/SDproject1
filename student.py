@@ -28,17 +28,19 @@ def display(id):
         cc.append(line)
     cc.pop(0)
     for i in cc:
-        
-        if int(id)==int(float(i[1])):
-            table.add_row([i[0],t[(int(i[2]))],i[3],i[4]])
-
+        try:
+            if int(id)==int(float(i[1])):
+                table.add_row([i[0],t[(int(i[2]))],i[3],i[4]])
+        except:
+            aaaaa=4
+            print(".")
     print(table)
 
 def approve(id):
     display(id)
     df=pd.read_csv('complaints.csv')
     cn=(int(input("\nEnter the Uid of complaint to be approved : \n")))
-    df.loc[cn, 'status'] = '+'
+    df.loc[cn, 'status'] = '+s'
     df.to_csv("complaints.csv", index=False)
     print(" \n!!! Approved !!!")
 
